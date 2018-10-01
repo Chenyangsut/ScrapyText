@@ -17,13 +17,13 @@
 #         "X-Requested-With": "XMLHttpRequest"
 #     }
 #     mydata = {
-#         'email':'18802404422',
+#         'email':'',
 #         'icode':'',
 #         'origURL':'http://www.renren.com/home',
 #         'domain':'renren.com',
 #         'key_id':'1',
 #         'captcha_type':'web_login',
-#         'password':'1dc9b7665ee1b94f41b63fa2f81ab86a9b1b3e4a280b2002dc7eca77b36c68e5',
+#         'password':'',
 #         'rkey':'d4e7485a436e32e5d3f7b0af6ddbe52b',
 #         'f':'http%3A%2F%2Fzhibo.renren.com%2Ftop'
 #     }
@@ -61,13 +61,13 @@ class RrloginSpider(scrapy.Spider):
         date_time = '20188010' + str(s) + str(ms)
         login_url = base_url + date_time
         data = {
-            'email':'18802404422',
+            'email':'',
             'icode':'',
             'origURL':'http://www.renren.com/home',
             'domain':'renren.com',
             'key_id':'1',
             'captcha_type':'web_login',
-            'password':'1dc9b7665ee1b94f41b63fa2f81ab86a9b1b3e4a280b2002dc7eca77b36c68e5',
+            'password':'',
             'rkey':'d4e7485a436e32e5d3f7b0af6ddbe52b',
             'f':'http%3A%2F%2Fzhibo.renren.com%2Ftop'
         }
