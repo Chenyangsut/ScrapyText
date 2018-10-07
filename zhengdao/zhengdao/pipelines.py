@@ -9,8 +9,12 @@ class ZhengdaoPipeline(object):
         # 小说存放路径
         curPath = 'f:/text/'
         file_name = str(item['chapter_name']) + '.txt'
+        file_path = curPath + '/' + file_name.decode('utf-8')
         # 写入内容
-        fp = open(curPath+'/'+file_name.decode('utf-8'),'w')
-        fp.write(item['chapter_content'] + '\n')
-        fp.close()
+        if os.path.exists(file_path):
+            pass
+        else:
+            fp = open(file_path,'w')
+            fp.write(item['chapter_content'] + '\n')
+            fp.close()
         pass

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-import scrapy
+
 import re
 from zhengdao.items import ZhengdaoItem
 from scrapy.http import Request
 from scrapy.spider import CrawlSpider
-from scrapy.selector import Selector
+
 
 class QianlongSpider(CrawlSpider):
     name = 'qianlong'
@@ -35,7 +35,7 @@ class QianlongSpider(CrawlSpider):
         # 小说章节内容
         chapter_content_reg = r'<div id="content">.*?<script>'
         chapter_content_1 = re.findall(chapter_content_reg, result,flags=re.S)[0]
-        chapter_content = chapter_content_1.replace('<br/>', '')
+        chapter_content = chapter_content_1.replace('<br/>', '\n')
 
         item = ZhengdaoItem()
         item['name'] = name
