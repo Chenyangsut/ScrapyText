@@ -79,7 +79,7 @@ class WuyaoSpider(scrapy.Spider):
             print('----',jobItem)
             jobspidersItem = QianchengwuyouItem()
 
-            jobPosition = jobItem.xpath('p[@class="t1 "]/span/a/text()').extract()
+            jobPosition = jobItem.xpath('p/span/a/text()').extract()
             if jobPosition:
                 #print(jobPosition[0].strip())
                 jobspidersItem['jobPosition'] = jobPosition[0].strip()
