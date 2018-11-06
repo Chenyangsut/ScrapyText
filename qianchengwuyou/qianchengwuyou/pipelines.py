@@ -45,7 +45,6 @@ class QianchengwuyouPipeline(object):
             "insert into beijing(jobposition,jobcompany, jobarea, jobsale,jobDT) values(%s,%s, %s,%s,%s)",
             (position,item["jobCompany"], item["jobArea"],
              item["jobSale"],date))
-        # conn.execute("insert into shili(jobPosition, jobCompany, jobArea, jobSale) values(%s, %s, %s，%s)",(item["jobPosition"],item["jobCompany"], item["jobArea"], item["jobSale"]))
         log.msg("-------------------一轮循环完毕-------------------")
 
     def _handle_error(self, failue, item, spider):

@@ -8,7 +8,7 @@ class WuyaoSpider(scrapy.Spider):
     #allowed_domains = ['search.51job.com/list/010000,000000,0000,00,9,99,%2520,2,1.html']
     #北京python搜索结果
     start_urls = [
-        'https://search.51job.com/list/010000,000000,0000,01,9,99,python,2,1.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=']
+        'https://search.51job.com/list/080200%252C070200%252C090200%252C060000%252C030800,000000,0000,01,9,99,python,2,1.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=']
 
     def parse(self, response):
         #页面需要结果
